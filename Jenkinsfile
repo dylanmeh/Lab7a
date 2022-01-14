@@ -26,12 +26,19 @@ spec:
         }
     }
     stages {
-        stage('echo value1') {
+        stage('echo value2') {
             steps {
                 script {
                     echo "print ${props["key2"]}"
                 }    
             }            
+        }
+        stage('echo value1') {
+            steps {
+                script {
+                    echo "print ${props["key1"]}"
+                }
+            }
         }
     }
 }

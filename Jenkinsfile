@@ -20,8 +20,7 @@ spec:
         stage('Main') {
             steps {
                 script {
-                    def properties = [:]
-                    properties = readProperties interpolate: true, file: 'build.properties'
+                    def properties = readProperties file: 'build.properties'
                 }
             }
         }

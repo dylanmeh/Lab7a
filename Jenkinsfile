@@ -21,7 +21,6 @@ spec:
             steps {
                 script {
                     def var1 = "value1"
-                    def properties = readProperties file: 'build.properties'
                 }
             }
         }

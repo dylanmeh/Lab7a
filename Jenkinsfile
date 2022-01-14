@@ -21,12 +21,16 @@ spec:
     stages {
         stage('echo value1') {
             steps {
-                echo "print ${props["key1"]}"
+                script {
+                    echo "print ${props["key1"]}"
+                }    
             }            
         }
         stage('echo value2') {
             steps {
-                echo "print ${props["key2"]}"   
+                script {
+                    echo "print ${props["key2"]}"
+                }       
             }        
         }
     }

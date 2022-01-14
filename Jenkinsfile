@@ -20,8 +20,9 @@ spec:
         stage('echo value1') {
             steps {
                 script {
-                    def var1 = 'value1'
-                    echo "print ${var1}"
+                    def props = [:]
+                    props = readProperties(file: 'build.properties')
+                    echo "print ${props["var1"]}"
                 }    
             }        
         }

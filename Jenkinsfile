@@ -21,7 +21,7 @@ spec:
             steps {
                 script {
                     def properties = [:]
-                    def properties = readProperties interpolate: true, file: 'build.properties'
+                    properties = readProperties interpolate: true, file: 'build.properties'
                 }
             }
         }

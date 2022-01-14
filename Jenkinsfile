@@ -20,7 +20,7 @@ spec:
         stage('echo value1') {
             steps {
                 script {
-                    def var1 = "value1"
+                    def var1 = 'value1'
                     echo "print ${var1}"
                 }    
             }        

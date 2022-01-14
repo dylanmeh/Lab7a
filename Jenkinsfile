@@ -1,3 +1,12 @@
+def props = [:]
+
+podTemplate {
+    node(POD_LABEL) {
+        checkout scm
+        props = readProperties(file: 'build.properties')
+    }
+}
+
 pipeline {
     agent {
         kubernetes {
@@ -20,11 +29,9 @@ spec:
         stage('echo value1') {
             steps {
                 script {
-                    def props = [:]
-                    props = readProperties(file: 'build.properties')
                     echo "print ${props["key1"]}"
                 }    
-            }        
+            }            
         }
     }
 }

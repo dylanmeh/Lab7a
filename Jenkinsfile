@@ -20,6 +20,7 @@ spec:
         stage('Main') {
             steps {
                 script {
+                    def props = [:]
                     def properties = readProperties(file: 'build.properties')
                 }
             }

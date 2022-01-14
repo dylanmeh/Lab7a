@@ -1,3 +1,5 @@
+def props = [:]
+props = readProperties(file: 'build.properties')
 pipeline {
     agent {
         kubernetes {
@@ -20,9 +22,14 @@ spec:
         stage('echo value1') {
             steps {
                 script {
-                    def props = [:]
-                    props = readProperties(file: 'build.properties')
                     echo "print ${props["key1"]}"
+                }    
+            }        
+        }
+        stage('echo value1') {
+            steps {
+                script {
+                    echo "print ${props["key2"]}"
                 }    
             }        
         }

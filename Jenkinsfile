@@ -29,7 +29,7 @@ spec:
         stage('echo value1') {
             steps {
                 script {
-                    echo "print ${props["key1"]}"
+                    echo "print ${props["key2"]}"
                 }    
             }            
         }

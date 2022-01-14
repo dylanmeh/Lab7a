@@ -17,16 +17,12 @@ spec:
         }
     }
     stages {
-        stage('Main') {
-            steps {
-                script {
-                    def var1 = 'value1'
-                }
-            }
-        }
         stage('echo value1') {
             steps {
-                echo "print ${var1}"
+                script {
+                    def var1 = "value1"
+                    echo "print ${var1}"
+                }    
             }        
         }
     }

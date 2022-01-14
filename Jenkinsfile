@@ -20,13 +20,14 @@ spec:
         stage('Main') {
             steps {
                 script {
+                    def var1 = "value1"
                     def properties = readProperties file: 'build.properties'
                 }
             }
         }
         stage('echo value1') {
             steps {
-                echo "print ${properties["key1"]}"
+                echo "print ${var1}"
             }        
         }
     }

@@ -22,7 +22,7 @@ spec:
                 script {
                     def props = [:]
                     props = readProperties(file: 'build.properties')
-                    echo "print ${props["var1"]}"
+                    echo "print ${props["key1"]}"
                 }    
             }        
         }

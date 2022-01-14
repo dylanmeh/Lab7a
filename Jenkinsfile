@@ -25,7 +25,9 @@ spec:
             }
         }
         stage('echo value1') {
-            sh "echo 'print ${properties["key1"]}'"
+            steps {
+                sh "echo 'print ${properties["key1"]}'"
+            }        
         }
     }
 }
